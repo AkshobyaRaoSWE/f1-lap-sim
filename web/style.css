@@ -1,0 +1,67 @@
+:root {
+  --bg: #0b0e14;
+  --panel: #151a23;
+  --line: #232a36;
+  --text: #e6e9ef;
+  --muted: #8b94a7;
+  --accent: #e10600; /* F1 red */
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+header {
+  padding: 20px 28px 8px;
+  border-bottom: 1px solid var(--line);
+}
+header h1 { margin: 0; font-size: 22px; letter-spacing: 0.5px; }
+header h1::before {
+  content: ""; display: inline-block; width: 6px; height: 20px;
+  background: var(--accent); margin-right: 10px; vertical-align: -3px;
+}
+.sub { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+
+main {
+  display: flex; gap: 20px; padding: 20px 28px; align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.stage { position: relative; }
+canvas {
+  background: #0e1219; border: 1px solid var(--line); border-radius: 10px;
+}
+.readout {
+  display: flex; gap: 26px; margin-top: 12px;
+}
+.stat span { font-size: 26px; font-variant-numeric: tabular-nums; font-weight: 600; }
+.stat label { display: block; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+
+.controls {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+  padding: 18px; width: 240px; display: flex; flex-direction: column; gap: 14px;
+}
+.controls label { font-size: 13px; color: var(--muted); display: block; }
+.controls output { float: right; color: var(--text); font-weight: 600; }
+.controls input[type=range] { width: 100%; accent-color: var(--accent); margin-top: 6px; }
+.controls select {
+  width: 100%; margin-top: 6px; padding: 6px; background: #0e1219;
+  color: var(--text); border: 1px solid var(--line); border-radius: 6px;
+}
+button {
+  background: var(--accent); color: white; border: none; padding: 11px;
+  border-radius: 7px; font-size: 14px; font-weight: 600; cursor: pointer;
+}
+button:hover { filter: brightness(1.12); }
+
+.legend { font-size: 12px; color: var(--muted); display: flex; align-items: center; }
+.legend .bar {
+  display: inline-block; width: 90px; height: 10px; border-radius: 5px;
+  background: linear-gradient(90deg, #2b6cff, #19d27a, #f2d20a, #e10600);
+}
+.hint { font-size: 12px; color: var(--muted); min-height: 16px; }

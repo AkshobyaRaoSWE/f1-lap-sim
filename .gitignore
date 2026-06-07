@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Keep demo image + web data, ignore scratch pngs
+assets/*.png
+!assets/demo.png
