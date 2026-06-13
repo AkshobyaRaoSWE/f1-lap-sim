@@ -65,7 +65,7 @@ curvature).
 ```bash
 pip install -r requirements.txt
 
-python server.py        # then open http://localhost:5000  (interactive)
+python server.py        # then open http://localhost:5050  (interactive)
 python generate_data.py # refresh the static demo + web/data.json
 python -m pytest        # or: python tests/test_lap.py
 ```

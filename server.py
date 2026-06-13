@@ -3,7 +3,7 @@
 The browser sends the car parameters from the sliders; this runs the lap-time
 simulation and returns the track geometry plus the speed profile as JSON. Run:
 
-    python server.py    ->    open http://localhost:5000
+    python server.py    ->    open http://localhost:5050
 """
 
 from __future__ import annotations
@@ -46,4 +46,5 @@ def api_simulate():
 
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=5000, debug=False)
+    # 5050, not 5000: macOS Control Center / AirPlay Receiver holds port 5000.
+    app.run(host="127.0.0.1", port=5050, debug=False)
